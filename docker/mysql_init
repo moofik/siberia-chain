@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+. $(dirname $0)/script/functions.sh
+
+Q1="CREATE DATABASE IF NOT EXISTS brainpower;"
+Q2="GRANT ALL ON *.* TO 'brainpower'@'localhost' IDENTIFIED BY 'brainpower';"
+Q3="FLUSH PRIVILEGES;"
+SQL="${Q1}${Q2}${Q3}"
+
+mysql mysql -uroot -pbrainpower -e "$SQL"
+
+echo "Usage: $0 dbname dbuser dbpass"
+

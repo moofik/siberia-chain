@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+. $(dirname $0)/script/functions.sh
+
+if [[ -z "$@" ]]; then
+    mysql mysql brainpower -hbrainpower-mysql -ubrainpower -pbrainpower
+    exit 0
+fi
+
+mysql mysql "$@"
+

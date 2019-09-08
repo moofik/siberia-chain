@@ -1,0 +1,6 @@
+nginx/
+composer/
+mysql/
+mydata/
+data/
+rabbitmq/
